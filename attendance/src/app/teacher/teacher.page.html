@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>teacher</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="medium">
+
+	<div *ngFor="let key of keys">
+		<ion-card color="light" (click)="go(cards[key].subject['name'], key)">
+	    <ion-card-header>
+	      <ion-card-title><p>{{cards[key].subject['name']}}</p></ion-card-title>
+	    </ion-card-header>
+
+	    <ion-card-content>
+	    	{{cards[key].card[0].period['start_time']}} - {{cards[key].card[0].period['end_time']}}
+	    <br>
+	    {{cards[key].group['groupsname']}}
+	    </ion-card-content>
+	  </ion-card>
+	</div>
+
+</ion-content>

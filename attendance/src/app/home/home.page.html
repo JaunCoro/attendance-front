@@ -1,0 +1,18 @@
+<ion-content padding>
+
+	<img class="logo" src="http://uartesdigitales.edu.mx/wp-content/uploads/2017/12/logo_largo.png" alt="UAD - Universidad de Artes Digitales">
+
+	<h2>{{error}}</h2>
+
+  <ion-item>
+	  <ion-label position="floating">Correo electrónico</ion-label>
+	  <ion-input #userMail value="eparada@uartesdigitales.edu.mx"></ion-input>
+	</ion-item>
+	
+	<ion-item>
+	  <ion-label position="floating">Contraseña</ion-label>
+	  <ion-input #password type="password" value="abc123"></ion-input>
+	</ion-item>
+
+  <ion-button expand="full" (click)="go(userMail.value, password.value)">Iniciar Sesión</ion-button>
+</ion-content>

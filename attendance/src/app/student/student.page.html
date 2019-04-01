@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Mis Clases</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="medium">
+	<div>
+		<div *ngFor="let key of keys">
+			<ion-card class="card" color="light" (click)="go(key)">
+		    <ion-card-header>
+		      <ion-card-title>{{cards[0].group[0].lesson[key].subject.name}}</ion-card-title>
+		    </ion-card-header>
+
+		    <ion-card-content>
+		    {{cards[0].group[0].lesson[key].card[0].period.start_time}} - 
+		    {{cards[0].group[0].lesson[key].card[0].period.end_time}}
+		    <br>
+		    {{cards[0].group[0].lesson[key].card[0].day}}
+		    </ion-card-content>
+		    <ion-card-content>
+		    	<ion-text class="faltas" color="{{ color }}">
+					  <p>  </p>
+					</ion-text>
+				  <ion-button expand="full" (click)="code()">
+				    Ingresar un código
+				  </ion-button>
+			  </ion-card-content>
+		  </ion-card>
+		</div>
+	</div>
+</ion-content>

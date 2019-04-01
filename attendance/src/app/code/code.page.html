@@ -1,0 +1,27 @@
+<ion-header>
+	<ion-toolbar>
+		<ion-title>Codigo de la clase</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+	<div>
+		<div>
+			<ion-text class="code" color="{{ color }}">
+			  <h1>{{ code }}</h1>
+			</ion-text>
+			<div id="countdown">
+			  <div id="countdown-number" [ngClass]="countdown_number"></div>
+			 	<svg>
+			   	<circle [ngClass]="circle" r="18" cx="20" cy="20"></circle>
+			 	</svg>
+			</div>
+		</div>
+	</div>
+</ion-content>
+
+<ion-footer>
+	<ion-button expand="full" (click)="go()">Cerrar Lista</ion-button>
+</ion-footer>
+
+

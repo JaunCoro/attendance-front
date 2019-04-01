@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>redeem</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<div class="my-overlay" padding [hidden]="overlayHidden">
+			<ion-card  class="card">
+		    <ion-card-header>
+		      <ion-card-title>¡Bien!</ion-card-title>
+		    </ion-card-header>
+		    <ion-card-content>
+		    	<ion-text>
+		    		<p>Tu código fue validado</p>
+		    	</ion-text>
+		    </ion-card-content>
+		    <ion-card-content>
+		    		<ion-icon name="checkmark-circle" color="success" size="large"></ion-icon>
+		    </ion-card-content>
+		  </ion-card>
+</div>
+
+<ion-content padding>
+	<ion-item>
+	  <ion-label position="floating">Ingresa el código de la clase</ion-label>
+	  <ion-input type="number" #code></ion-input>
+	</ion-item>
+
+	<ion-button color="primary" class="send" (click)="send(code.value)">enviar</ion-button>
+</ion-content>
