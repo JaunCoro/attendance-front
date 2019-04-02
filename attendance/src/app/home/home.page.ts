@@ -37,7 +37,9 @@ export class HomePage {
 				this.router.navigate(["teacher"]);
 			}else if (this.user.user['role'] == "student") {
 				localStorage.setItem("email", this.user.user['email']);
+				localStorage.setItem("studentName", this.user.user['name'])
 				console.log(localStorage.getItem('email'));
+				console.log(localStorage.getItem('studentName'));
 				this.router.navigate(["student"]);
 			}
 		})

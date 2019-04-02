@@ -62,7 +62,8 @@ export class StudentPage implements OnInit {
   	
   }
 
-	code(){
+	code(key){
+		localStorage.setItem('studentSub', this.cards[0].group[0].lesson[key].subject.name)
 		this.router.navigate(['redeem']);
 	}
 }

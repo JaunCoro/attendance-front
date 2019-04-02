@@ -16,9 +16,22 @@ export class RedeemPage implements OnInit {
   name
   validation
   cards
+  lists
+  keys
+  json = []
+  id
 
   ngOnInit() {
-    this.name = 'Juan Pablo Coronado Rosales';
+    console.log(localStorage.getItem('studentName'))
+    this.service.getRegistries(localStorage.getItem('studentSub')).subscribe(data => {
+      console.log(data)
+      this.lists = data
+      console.log(this.lists[0].id)
+      this.keys = Object.keys(this.lists)
+      console.log(this.keys)
+      this.id = this.lists[this.keys.length-1].id
+       console.log(this.id)
+    })
   }
 
   send(code){
@@ -27,7 +40,11 @@ export class RedeemPage implements OnInit {
       console.log(data)
       this.validation = data
       console.log(this.validation)
-      if (this.validation == "You are registered") {
+      if (this.validation == "Success") {
+        this.json.push({name: localStorage.getItem('studentName'), isChecked: true})
+        this.service.createDetail(this.json, this.id).subscribe(data => {
+          console.log(data)
+        })
         this.overlayHidden = false
         setTimeout(this.opensnack.bind(this), 5000)
       }
