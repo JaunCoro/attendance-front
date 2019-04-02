@@ -29,7 +29,7 @@ export class ListPage implements OnInit {
   			this.students.push({name: this.group[0].student[i].name, isChecked: this.checked})
   		}
 
-  		console.log(this.students)
+  		console.log(this.students[1])
   	})
   }
 

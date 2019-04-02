@@ -28,6 +28,10 @@ export class ClassComponent implements OnInit {
   	})
   }
 
+  getDetail(id){
+    this.router.navigate(['detail/'+id])
+  }
+
   go(){
   	this.router.navigate(['code']);
   	this.service.createRegister(

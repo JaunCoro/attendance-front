@@ -7,7 +7,7 @@
 <ion-content padding>
 	<ion-list>
 	  <ion-item *ngFor="let key of keys">
-	    <ion-label>{{ lists[key].date_time }}</ion-label>
+	    <ion-label (click)="getDetail(lists[key].id)">{{ lists[key].date_time }}</ion-label>
 	  </ion-item>
 	</ion-list>
 

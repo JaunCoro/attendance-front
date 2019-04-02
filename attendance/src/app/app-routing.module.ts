@@ -11,6 +11,7 @@ const routes: Routes = [
   { path: 'code', loadChildren: './code/code.module#CodePageModule'},
   { path: 'redeem', loadChildren: './redeem/redeem.module#RedeemPageModule'},
   { path: 'list', loadChildren: './list/list.module#ListPageModule'},
+  { path: 'detail/:id', loadChildren: './detail/detail.module#DetailPageModule'},
 ];
 
 @NgModule({
