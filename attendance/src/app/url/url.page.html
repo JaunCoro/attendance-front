@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>url</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item>
+	  <ion-label position="floating">url</ion-label>
+	  <ion-input #url></ion-input>
+  </ion-item>
+  
+  <ion-button expand="full" (click)="go(url.value)">Iniciar Sesión</ion-button>
+</ion-content>

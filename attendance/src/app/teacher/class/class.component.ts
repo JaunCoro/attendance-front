@@ -41,7 +41,9 @@ export class ClassComponent implements OnInit {
   		localStorage.getItem('day'),
   		localStorage.getItem('start_time'),
   		localStorage.getItem('end_time')).subscribe(data => {
-  			console.log(data)
+			  console.log(data)
+			  this.id = data
+			  localStorage.setItem('registryId', this.id.id)
   	})
   }
 

@@ -4,7 +4,7 @@ import { AuthGuard } from './auth.guard';
 
 
 const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: '', redirectTo: 'url', pathMatch: 'full' },
   { path: 'home', loadChildren: './home/home.module#HomePageModule' },
   { path: 'teacher', loadChildren: './teacher/teacher.module#TeacherPageModule'},
   { path: 'student', loadChildren: './student/student.module#StudentPageModule'},
@@ -12,6 +12,8 @@ const routes: Routes = [
   { path: 'redeem', loadChildren: './redeem/redeem.module#RedeemPageModule'},
   { path: 'list', loadChildren: './list/list.module#ListPageModule'},
   { path: 'detail/:id', loadChildren: './detail/detail.module#DetailPageModule'},
+  { path: 'url', loadChildren: './url/url.module#UrlPageModule' },
+
 ];
 
 @NgModule({

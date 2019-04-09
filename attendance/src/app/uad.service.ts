@@ -17,7 +17,7 @@ import { Observable } from "rxjs";
 export class ConfigService {
   constructor(private http: HttpClient) { }
 
-  public url: string = "https://e7efc912.ngrok.io/api/"
+  public url: string = "https://"+ localStorage.getItem('url') +"/api/"
 
   getCode(): Observable<codeInterface[]>{
   	const  headers = new  HttpHeaders().set('Accept', 'application/json');
@@ -111,6 +111,14 @@ export class ConfigService {
 
     let url = this.url + "update-registry"
     
-    return this.http.put(url, {id: id, student: json}, { headers })
+    return this.http.put(url, {student: json, id: id}, { headers })
+  }
+
+  updateStudent(json, id){
+	  const headers = new HttpHeaders().set('Accept', 'application/json')
+
+	  let url = this.url + "student-update-registry"
+
+	  return this.http.put(url, {student: json, id: id}, { headers })
   }
 }

@@ -1,6 +1,12 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>detail</ion-title>
+			<ion-buttons slot="start">
+					<ion-back-button
+						[text]="buttonText"
+						[icon]="buttonIcon">
+					</ion-back-button>
+				</ion-buttons>
+    <ion-title>{{ sub }}</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -14,5 +20,5 @@
 </ion-content>
 
 <ion-footer>
-	<ion-button expand="full" (click)="go()">Modificar Lista</ion-button>
+	<ion-button expand="full" (click)="go()">Actualizar Lista</ion-button>
 </ion-footer>

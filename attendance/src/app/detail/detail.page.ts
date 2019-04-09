@@ -15,6 +15,7 @@ export class DetailPage implements OnInit {
   id
   students = []
   student
+  sub = localStorage.getItem('subject')
   keys
 
   ngOnInit() {

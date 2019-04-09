@@ -14,6 +14,7 @@ export class ListPage implements OnInit {
   group
   keys
   checked = false
+  sub = localStorage.getItem('subject')
   students = []
 
   ngOnInit() {

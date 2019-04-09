@@ -42,7 +42,8 @@ export class RedeemPage implements OnInit {
       console.log(this.validation)
       if (this.validation == "Success") {
         this.json.push({name: localStorage.getItem('studentName'), isChecked: true})
-        this.service.createDetail(this.json, this.id).subscribe(data => {
+        console.log("el id es: " + this.id)
+        this.service.updateStudent(this.json, this.id).subscribe(data => {
           console.log(data)
         })
         this.overlayHidden = false
